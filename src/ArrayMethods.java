@@ -34,40 +34,36 @@ public class ArrayMethods {
     public void RemoveElements()
     {
         System.out.println("Enter the element you want to remove");
-
-
+        int n=input.nextInt();
         int j;
-        int  index=input.nextInt();
         for (int i = 0; i <array.length ; i++) {
-
-            if(array[i]==index)
+            if(array[i]==n)
             {
-                for( j=i;j<array.length-1;j++){
+                for ( j = i; j <array.length-1 ; j++) {
                     array[j]=array[j+1];
-                    index++;
-                }
-                array[j]=0;
-            }else System.out.println("Element is not found");break;
+                } array[j]=0;
+                break;
+            }}}
+    public void ArrayElements()
+    {System.out.println("the Elements of array after deletion");
+        System.out.println(Arrays.toString(arr));}
 
-
-
-        }}
-        public void ArrayElements()
-    {
-        System.out.println("the Elements of array after deletion");
-        System.out.println(Arrays.toString(arr));
-    }
-
-
-
-
-    public static void main(String[]args){
-        ArrayMethods d=new ArrayMethods();
+    public static void main(String[]args) {
+        ArrayMethods d = new ArrayMethods();
         d.reversArray();
         System.out.println(Arrays.toString(array));
         d.CloneArray();
 
-    d.RemoveElements();
+        d.RemoveElements();
         d.ArrayElements();
+
+        System.out.println("remove the elements from array ");
+        for(int i=0;i<array.length;i++){
+
+            d.RemoveElements();
+            d.ArrayElements();
+        }
+
     }
-}
+    }
+
